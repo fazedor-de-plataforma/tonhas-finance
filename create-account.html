@@ -6,25 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">    
         <link rel="stylesheet" href="login-styles.css">
-        <title>Login - Tonha'$ finance$</title>
+        <title>Criar conta - Tonha'$ finance$</title>
     </head>
     <body>
         <div class="login-container">
             <div id="login-wrapper">
                 <h1 id="logo">Tonha'$ finance$</h1>
                 <span>Email:</span>
-                <input type="email" name="name" id="email" class="login-input" placeholder="Digite seu email">
-
+                <input type="email" name="email" id="email" class="login-input" placeholder="Digite seu email">
+                <span>Nome:</span>
+                <input type="text" name="name" id="name" class="login-input" placeholder="Digite seu nome">
                 <span>Senha:</span>
                 <input type="password" name="password" id="password" class="login-input" placeholder="Digite sua senha">
-                <input type="button" value="Entrar" id="login-button" onclick="authenticate()">
-                <span id="error"></span>
-                <a href="/create-account.html" style="text-decoration: none; color: #FFF">
-                    Ainda não possui uma conta? Crie já
+                <span>Confirmar Senha:</span>
+                <input type="password" name="password" class="login-input" placeholder="Digite sua senha">
+                <input type="button" value="Entrar" id="login-button" onclick="createAccount()">
+
+                <a href="/login.html" style="text-decoration: none; color: #FFF">
+                    Já possui uma conta? Clique aqui!
                 </a>
             </div>
         </div>
     </body>
+    
     <script src="./authentication.js"></script>
-    <script>if(sessionStorage.getItem("userId")) window.location.href = "/finanças.html";</script>
 </html>

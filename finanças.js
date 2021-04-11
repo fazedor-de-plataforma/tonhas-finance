@@ -43,6 +43,7 @@ function organization (text){
 
 /*adicionar no documento*/
 function adicionator (text){
+    console.log(text)
     const local= document.querySelector("#data-table tbody")
     local.appendChild(text)
 }

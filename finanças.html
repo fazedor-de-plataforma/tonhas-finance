@@ -90,7 +90,7 @@
                     
                     <div id="form-button">
                         <a href="#" id="cancel-button" class="cancel-button" onclick="cancel()" >Cancelar</a>
-                        <button id="save-button" onclick="clickeitor()">Salvar</button>
+                        <button id="save-button" onclick="createTransaction()">Salvar</button>
                     </div>
                     
                 </form>
@@ -100,6 +100,12 @@
     <footer>
         Tonha$.finance$
     </footer>
+    <script src="./transactions.js"></script>
+    <script>
+        const table = document.querySelector("#data-table tbody");
+        if(!sessionStorage.getItem("userId")) window.location.href = "/login.html";
+        getTransactions()
+    </script>
     <script src="finanças.js"></script>
 </body>
 </html>
